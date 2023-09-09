@@ -26,9 +26,9 @@ const Navbar = () => {
                 <Image src={"/youtube.png"} width={30} height={30} alt="facebook" />
             </div>
             <div>
-                <h1 className="font-bold text-[28px] md:text-[36px]">GapShap</h1>
+                <h1 className="font-bold text-[22px] md:text-[36px]">GapShap</h1>
             </div>
-            <div className="flex items-center gap-4 flex-1 justify-end cursor-pointer">
+            <div className="flex items-center gap-2 md:gap-4 flex-1 justify-end cursor-pointer">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" size="icon">
