@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import Image from "next/image"
 import AuthLinks from "./authLinks"
+import Link from "next/link"
 
 
 const Navbar = () => {
@@ -27,7 +28,9 @@ const Navbar = () => {
                 <Image src={"/youtube.png"} width={30} height={30} alt="facebook" />
             </div>
             <div>
-                <h1 className="font-bold text-[22px] md:text-[36px]">GapShap</h1>
+                <Link href="/">
+                    <h1 className="font-bold text-[22px] md:text-[36px]">GapShap</h1>
+                </Link>
             </div>
             <div className="flex items-center gap-4 flex-1 justify-end cursor-pointer">
                 <DropdownMenu>
