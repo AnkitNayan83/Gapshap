@@ -12,14 +12,15 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Image from "next/image"
+import AuthLinks from "./authLinks"
 
 
 const Navbar = () => {
     const { setTheme } = useTheme()
 
     return (
-        <div className="flex items-center mt-6">
-            <div className=" items-center gap-2 flex-1 hidden md:hidden lg:flex">
+        <div className="flex items-center my-6">
+            <div className=" items-center gap-2 md:flex-1 hidden md:hidden lg:flex">
                 <Image src={"/facebook.png"} width={30} height={30} alt="facebook" />
                 <Image src={"/instagram.png"} width={30} height={30} alt="facebook" />
                 <Image src={"/tiktok.png"} width={30} height={30} alt="facebook" />
@@ -28,7 +29,7 @@ const Navbar = () => {
             <div>
                 <h1 className="font-bold text-[22px] md:text-[36px]">GapShap</h1>
             </div>
-            <div className="flex items-center gap-2 md:gap-4 flex-1 justify-end cursor-pointer">
+            <div className="flex items-center gap-4 flex-1 justify-end cursor-pointer">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" size="icon">
@@ -49,10 +50,10 @@ const Navbar = () => {
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
-                <span>HomePage</span>
-                <span>Contact</span>
-                <span>About</span>
-                <span>Login</span>
+                <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">HomePage</span>
+                <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">Contact</span>
+                <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">About</span>
+                <AuthLinks />
             </div>
         </div>
     )
