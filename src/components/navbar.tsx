@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className=" items-center gap-2 md:flex-1 hidden md:hidden lg:flex">
                 <Image src={"/facebook.png"} width={30} height={30} alt="facebook" />
                 <Image src={"/instagram.png"} width={30} height={30} alt="facebook" />
-                <Image src={"/tiktok.png"} width={30} height={30} alt="facebook" />
+                <Image src={"/whatsapp.png"} width={30} height={30} alt="image from pngtree.com" />
                 <Image src={"/youtube.png"} width={30} height={30} alt="facebook" />
             </div>
             <div>
