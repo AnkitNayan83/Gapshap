@@ -22,10 +22,10 @@ const Navbar = () => {
     return (
         <div className="flex items-center my-6">
             <div className=" items-center gap-2 md:flex-1 hidden md:hidden lg:flex">
-                <Image src={"/facebook.png"} width={30} height={30} alt="facebook" />
-                <Image src={"/instagram.png"} width={30} height={30} alt="facebook" />
-                <Image src={"/whatsapp.png"} width={30} height={30} alt="image from pngtree.com" />
-                <Image src={"/youtube.png"} width={30} height={30} alt="facebook" />
+                <Image src={"/facebook.png"} width={30} height={30} alt="facebook" className="cursor-pointer" />
+                <Image src={"/instagram.png"} width={30} height={30} alt="facebook" className="cursor-pointer" />
+                <Image src={"/whatsapp.png"} width={30} height={30} alt="image from pngtree.com" className="cursor-pointer" />
+                <Image src={"/youtube.png"} width={30} height={30} alt="facebook" className="cursor-pointer" />
             </div>
             <div>
                 <Link href="/">
