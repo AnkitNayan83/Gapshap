@@ -11,9 +11,9 @@ const About = () => {
                     </h1>
                     <p className="text-justify font-medium text-xl">
                         Welcome to Gapshap, where stories find their voice and connections flourish
-                        through the power of words. Gapshap is more than just a platform; it's a
-                        vibrant community of storytellers and listeners, where narratives come alive
-                        and perspectives unite.
+                        through the power of words. Gapshap is more than just a platform; it&apos;s
+                        a vibrant community of storytellers and listeners, where narratives come
+                        alive and perspectives unite.
                     </p>
                 </div>
                 <div className="flex-1 relative h-[300px]">
@@ -35,7 +35,7 @@ const About = () => {
                     Why Gapshap?
                 </h1>
                 <p className="text-justify font-medium text-xl mb-2">
-                    <strong>Diverse Topics:</strong> Whether you're passionate about travel,
+                    <strong>Diverse Topics:</strong> Whether you&apos;re passionate about travel,
                     technology, health, or any other subject, Gapshap offers a space for you to
                     explore, express, and engage with stories from various domains.
                 </p>
@@ -55,9 +55,9 @@ const About = () => {
                     Join Us in Shaping Stories
                 </h1>
                 <p className="text-justify font-medium text-xl mb-4">
-                    Whether you're an avid storyteller or a curious reader, Gapshap welcomes you
-                    with open arms. Share your experiences, thoughts, and dreams with the world, and
-                    be part of a community that celebrates the beauty of human expression.
+                    Whether you&apos;re an avid storyteller or a curious reader, Gapshap welcomes
+                    you with open arms. Share your experiences, thoughts, and dreams with the world,
+                    and be part of a community that celebrates the beauty of human expression.
                 </p>
             </div>
         </div>
