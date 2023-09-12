@@ -5,7 +5,7 @@ import Featured from "@/components/featured";
 
 export default function Home() {
     return (
-        <main>
+        <main className="scroll-smooth">
             <Featured />
             <PopularCategories />
             <Banner />

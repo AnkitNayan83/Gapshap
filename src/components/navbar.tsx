@@ -75,9 +75,11 @@ const Navbar = () => {
                 <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
                     HomePage
                 </span>
-                <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
-                    Contact
-                </span>
+                <Link href={"/#footer"}>
+                    <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
+                        Contact
+                    </span>
+                </Link>
                 <Link href={"/#abt"}>
                     <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
                         About
