@@ -1,17 +1,8 @@
 import { Input } from "@/components/ui/input";
 import React from "react";
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import PostCard from "@/components/PostCard";
-import Link from "next/link";
+import CategoryList from "@/components/CategoryList";
 
 type Prop = {
     params: { categories: string };
@@ -23,8 +14,8 @@ const page = ({ params }: Prop) => {
         <div className="min-h-[100vh]">
             {/* search bar */}
 
-            <div className="flex items-center justify-between w-[100%] mt-12">
-                <div className="flex items-center gap-4 w-[60%]">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-[100%] mt-12">
+                <div className="flex items-center gap-4 w-[100%] md:w-[60%] mb-4 md:mb-0">
                     <Input
                         type="text"
                         id="text"
@@ -34,24 +25,7 @@ const page = ({ params }: Prop) => {
                     <Button className="p-6">Search</Button>
                 </div>
                 <div>
-                    <Select>
-                        <SelectTrigger className="w-[180px] py-6">
-                            <SelectValue placeholder="Select a Category" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectItem value="coding">Coding</SelectItem>
-
-                                <SelectItem value="politics">Politics</SelectItem>
-
-                                <SelectItem value="college">College</SelectItem>
-
-                                <SelectItem value="placements">Placements</SelectItem>
-
-                                <SelectItem value="pineapple">My Blogs</SelectItem>
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
+                    <CategoryList current={cat} />
                 </div>
             </div>
 
@@ -72,8 +46,8 @@ const page = ({ params }: Prop) => {
             </div>
             {/* pagination */}
             <div className="flex items-center justify-between my-[6%]">
-                <Button className="w-[10%]">Previous</Button>
-                <Button className="w-[10%]">Next</Button>
+                <Button className="w-[40%] md:w-[10%]">Previous</Button>
+                <Button className="w-[40%] md:w-[10%]">Next</Button>
             </div>
         </div>
     );
