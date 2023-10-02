@@ -1,8 +1,11 @@
+import Comment from "@/components/Comment";
+import Votes from "@/components/Votes";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 type Props = {
     params: { categories: String; id: String };
@@ -12,6 +15,9 @@ const page = ({ params }: Props) => {
     return (
         <div>
             {/* top */}
+            <Link href={`/posts/${params.categories}`}>
+                <ArrowBackIosIcon />
+            </Link>
             <div className="flex flex-col md:flex-row my-12">
                 <div className="md:flex-1">
                     <h1 className="text-[44px] md:text-[54px] font-bold">This is a test title</h1>
@@ -23,15 +29,8 @@ const page = ({ params }: Props) => {
                         <span className="bg-blue-500 p-2 rounded-md w-max font-bold text-lg capitalize">
                             {params.categories}
                         </span>
-                        <div className="flex items-center justify-center border-2 rounded-md w-[40%] md:w-[20%] mt-5 h-[50px]">
-                            <span className="border-r-2 flex justify-center items-center w-[25%] hover:bg-green-500 rounded-md cursor-pointer h-[100%]">
-                                +
-                            </span>
-                            <span className="flex justify-center w-[50%]">0</span>
-                            <span className="border-l-2 flex justify-center items-center w-[25%] hover:bg-red-500 rounded-md cursor-pointer h-[100%]">
-                                -
-                            </span>
-                        </div>
+
+                        <Votes />
                     </div>
                 </div>
                 <div className="h-[350px] mt-6 md:mt-0 w-[100%] md:flex-1 relative">
@@ -85,54 +84,7 @@ const page = ({ params }: Props) => {
                     Libero sit harum quaerat officia tenetur, nam impedit eligendi maxime ullam
                     voluptatem nulla quam quisquam pariatur sint totam mollitia aliquam similique,
                     eos ex minus provident voluptate. Illo aliquid asperiores in. Rerum dolore,
-                    libero sint dolorem sequi nam adipisci molestiae nihil magnam quibusdam sed
-                    deleniti expedita dignissimos asperiores inventore laboriosam, ab id? Similique
-                    expedita quo esse quia asperiores nisi eos provident. Mollitia nesciunt ab
-                    repellendus tenetur odio placeat doloremque omnis, sequi iste dolores aspernatur
-                    ex excepturi ullam ipsam, veniam expedita ea ipsa beatae nisi, nobis sapiente.
-                    Praesentium corporis ab nostrum possimus! Vel a voluptatibus earum illo ratione.
-                    Ad, tenetur ducimus! Consectetur exercitationem quae totam saepe hic aspernatur
-                    maiores, facere voluptatum modi doloribus blanditiis, itaque neque, ipsum
-                    dignissimos. Sequi odio quia quasi? Laudantium obcaecati corporis modi deserunt
-                    veritatis eaque veniam eos esse iusto aliquam, doloremque sint praesentium enim,
-                    placeat quisquam dignissimos maiores non pariatur quam, assumenda quos?
-                    Voluptate porro veniam inventore doloribus. Sapiente, illo. Animi, fugiat! Iste
-                    ab assumenda consequatur dignissimos libero hic, culpa ipsa! Enim sunt
-                    cupiditate error et quam officia at illum, natus ipsa sed vitae, perferendis
-                    eligendi delectus numquam? Ratione iste soluta quam voluptas quos ipsum hic
-                    facere iusto laborum iure. Veritatis voluptate officiis porro odit eum eaque
-                    nostrum quisquam unde non neque aliquid ratione, assumenda voluptatum mollitia
-                    accusamus. Error minus, aperiam facilis delectus aliquam ullam eligendi iure
-                    fugit, quam quaerat accusantium voluptates nam dicta sequi molestiae quidem ut
-                    dignissimos quo labore pariatur totam, sapiente libero. Fugit, accusantium
-                    repellat. Iure vel aperiam perspiciatis iusto expedita tempora vitae non? Ipsum
-                    provident natus sunt vel, rerum aliquam vero commodi magni, quisquam earum
-                    inventore aut quam quas. Atque voluptates nobis labore vitae. Culpa libero, nam
-                    blanditiis, natus repudiandae vel officiis temporibus totam eligendi dignissimos
-                    beatae quidem tempore perspiciatis voluptatibus ducimus laborum, laudantium
-                    dicta odio. Culpa fugiat consectetur necessitatibus at inventore facere iusto!
-                    Totam neque a libero, distinctio eos officiis cum omnis ratione quis perferendis
-                    porro ullam error nihil, veniam repellendus vero dolorum sit nulla, sapiente
-                    eligendi beatae animi! Totam qui assumenda earum. Maiores odit neque labore
-                    nostrum architecto molestiae officiis error temporibus earum, quas laboriosam ad
-                    dolorem voluptas amet eaque accusamus doloremque autem praesentium. Ab
-                    doloremque incidunt excepturi repudiandae eaque quam culpa. Expedita rem
-                    officiis voluptates ad. Labore, obcaecati. Placeat, iste deleniti, similique
-                    neque doloremque nemo inventore quibusdam tempora iure, nihil itaque non cumque
-                    ex magnam ullam quaerat perspiciatis voluptatem fuga quae? Dolores hic incidunt
-                    reiciendis at harum quod architecto quidem iusto repellendus possimus culpa
-                    accusamus eum deleniti natus, fugit sit excepturi itaque omnis accusantium
-                    exercitationem! Et esse aut reprehenderit eum voluptates. Illum fuga voluptatem
-                    consectetur beatae quos ullam dolore nesciunt ea aut at harum, voluptatum
-                    molestias perspiciatis ab totam. Tempora unde, laudantium beatae alias excepturi
-                    possimus repellat nulla eius quidem quam. Labore, est consequuntur cum vel
-                    quisquam deserunt a? Tempore reiciendis quisquam consequatur eos, iure aliquid
-                    error repellat nulla temporibus dolorem est ea nobis quae minima accusamus esse
-                    consectetur architecto. Eos?
                 </p>
-                <Link href={`/posts/${params.categories}`}>
-                    <Button className="mb-6 w-[25%] md:w-[15%]">Back</Button>
-                </Link>
             </div>
             {/* comments */}
             <div>
@@ -141,7 +93,12 @@ const page = ({ params }: Props) => {
                     className="mb-4 w-[100%] md:w-[60%]"
                 />
                 <Button className=" mb-6 w-[25%] md:w-[15%]">Post</Button>
-                <h1 className="text-2xl">Comments:</h1>
+                <h1 className="text-2xl mb-6">Comments:</h1>
+                <div>
+                    <Comment />
+                    <Comment />
+                    <Comment />
+                </div>
             </div>
         </div>
     );

@@ -19,7 +19,7 @@ const Navbar = () => {
     const { setTheme } = useTheme();
 
     return (
-        <div className="flex items-center my-6 sticky top-0 bg-[hsl(var(--background))] z-10">
+        <div className="flex items-center my-6 bg-[hsl(var(--background))] z-89 sticky top-0">
             <div className=" items-center gap-2 md:flex-1 hidden md:hidden lg:flex">
                 <Image
                     src={"/facebook.png"}
@@ -72,15 +72,17 @@ const Navbar = () => {
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
-                <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
-                    HomePage
-                </span>
+                <Link href={"/"}>
+                    <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
+                        HomePage
+                    </span>
+                </Link>
                 <Link href={"/#footer"}>
                     <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
                         Contact
                     </span>
                 </Link>
-                <Link href={"/#abt"}>
+                <Link href={"/aboutUs"}>
                     <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
                         About
                     </span>
