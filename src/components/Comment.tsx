@@ -15,7 +15,7 @@ const Comment = () => {
                     className="rounded-md"
                 />
                 <div className="flex flex-col items-start">
-                    <span className="font-bold text-xl">Test user:</span>
+                    <span className="font-bold text-xl">Test user</span>
                     <span>12/05/20</span>
                 </div>
             </div>
