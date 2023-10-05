@@ -2,11 +2,11 @@
 
 import ArrowBackIos from "@mui/icons-material/ArrowBackIos";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import CancelIcon from "@mui/icons-material/Cancel";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { Button } from "@/components/ui/button";
+import dynamic from "next/dynamic";
 
 const CreatePost = () => {
     const [cat, setCat] = useState("");
@@ -14,6 +14,8 @@ const CreatePost = () => {
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState<File>();
     const [text, setText] = useState("");
+
+    const ReactQuill = useMemo(() => dynamic(() => import("react-quill"), { ssr: false }), []);
 
     const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (!e.target.files) return;
