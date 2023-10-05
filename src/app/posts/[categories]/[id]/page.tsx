@@ -11,7 +11,7 @@ type Props = {
     params: { categories: String; id: String };
 };
 
-const page = ({ params }: Props) => {
+const SinglePost = ({ params }: Props) => {
     return (
         <div>
             {/* top */}
@@ -104,4 +104,4 @@ const page = ({ params }: Props) => {
     );
 };
 
-export default page;
+export default SinglePost;

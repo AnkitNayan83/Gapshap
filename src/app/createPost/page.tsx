@@ -8,7 +8,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { Button } from "@/components/ui/button";
 
-const page = () => {
+const CreatePost = () => {
     const [cat, setCat] = useState("");
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
@@ -109,4 +109,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default CreatePost;

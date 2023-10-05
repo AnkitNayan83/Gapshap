@@ -8,7 +8,7 @@ type Prop = {
     params: { categories: string };
 };
 
-const page = ({ params }: Prop) => {
+const Posts = ({ params }: Prop) => {
     const cat = params.categories;
     return (
         <div className="min-h-[100vh]">
@@ -53,4 +53,4 @@ const page = ({ params }: Prop) => {
     );
 };
 
-export default page;
+export default Posts;
