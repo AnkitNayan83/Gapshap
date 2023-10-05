@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
+import AuthProvider from "@/providers/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,15 +18,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <body className={inter.className}>
-                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-                    <div className="max-h-[100vh]">
-                        <div className="max-w-[475px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto px-[40px] md:px-[40px] lg:px-[80px] overflow-x-hidden">
-                            <Navbar />
-                            {children}
-                            <Footer />
+                <AuthProvider>
+                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                        <div className="max-h-[100vh]">
+                            <div className="max-w-[475px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto px-[40px] md:px-[40px] lg:px-[80px] overflow-x-hidden">
+                                <Navbar />
+                                {children}
+                                <Footer />
+                            </div>
                         </div>
-                    </div>
-                </ThemeProvider>
+                    </ThemeProvider>
+                </AuthProvider>
             </body>
         </html>
     );

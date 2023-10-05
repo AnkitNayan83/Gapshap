@@ -44,7 +44,7 @@ const CreatePost = () => {
 
             <div className="mt-6 flex items-center justify-between">
                 {file ? (
-                    <div className="flex items-center gap-4 text-2xl">
+                    <div className="flex items-center mr-2 md:mr-0 md:gap-4 md:text-2xl">
                         <h1>{file.name}</h1>{" "}
                         <CancelIcon className="cursor-pointer" onClick={() => setFile(undefined)} />{" "}
                     </div>
@@ -104,7 +104,7 @@ const CreatePost = () => {
 
             {/* postButton */}
 
-            <Button className="bg-green-400 hover:bg-green-500 mt-20 mb-12 w-[15%] text-[hsl(var(--foreground))] text-xl">
+            <Button className="bg-green-400 hover:bg-green-500 mt-28 md:mt-20 mb-12 w-[25%] md:w-[15%] text-[hsl(var(--foreground))] text-lg md:text-xl">
                 Post
             </Button>
         </div>

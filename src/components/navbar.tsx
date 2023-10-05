@@ -52,10 +52,10 @@ const Navbar = () => {
             </div>
             <div>
                 <Link href="/">
-                    <h1 className="font-bold text-[22px] md:text-[36px]">GapShap</h1>
+                    <h1 className="font-bold text-[20px] md:text-[36px] mr-2">GapShap</h1>
                 </Link>
             </div>
-            <div className="flex items-center gap-4 flex-1 justify-end cursor-pointer">
+            <div className="flex items-center gap-2 flex-1 justify-end cursor-pointer">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" size="icon">
@@ -75,11 +75,6 @@ const Navbar = () => {
                 <Link href={"/"}>
                     <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
                         HomePage
-                    </span>
-                </Link>
-                <Link href={"/#footer"}>
-                    <span className="hidden md:inline hover:bg-[hsl(var(--foreground))] hover:text-[hsl(var(--background))] rounded-md p-2">
-                        Contact
                     </span>
                 </Link>
                 <Link href={"/aboutUs"}>
