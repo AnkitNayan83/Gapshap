@@ -9,13 +9,13 @@ import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 
 const CreatePost = () => {
+    const ReactQuill = useMemo(() => dynamic(() => import("react-quill"), { ssr: false }), []);
+
     const [cat, setCat] = useState("");
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState<File>();
     const [text, setText] = useState("");
-
-    const ReactQuill = useMemo(() => dynamic(() => import("react-quill"), { ssr: false }), []);
 
     const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (!e.target.files) return;
