@@ -43,7 +43,8 @@ const page = () => {
             <div className="mt-6 flex items-center justify-between">
                 {file ? (
                     <div className="flex items-center gap-4 text-2xl">
-                        <h1>{file.name}</h1> <CancelIcon onClick={() => setFile(undefined)} />{" "}
+                        <h1>{file.name}</h1>{" "}
+                        <CancelIcon className="cursor-pointer" onClick={() => setFile(undefined)} />{" "}
                     </div>
                 ) : (
                     <label htmlFor="file" className="cursor-pointer text-2xl">
