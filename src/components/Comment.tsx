@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Votes from "./Votes";
+import CommentVote from "./CommentVote";
 
 const Comment = () => {
     return (
@@ -18,6 +19,7 @@ const Comment = () => {
                     <span className="font-bold text-xl">Test user</span>
                     <span>12/05/20</span>
                 </div>
+                <CommentVote />
             </div>
             <p className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
         </div>

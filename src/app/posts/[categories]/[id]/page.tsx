@@ -1,11 +1,9 @@
-import Comment from "@/components/Comment";
 import Votes from "@/components/Votes";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import CommentSection from "@/components/CommentSection";
 
 type Props = {
     params: { categories: String; id: String };
@@ -88,17 +86,7 @@ const SinglePost = ({ params }: Props) => {
             </div>
             {/* comments */}
             <div>
-                <Textarea
-                    placeholder="Enter your comment..."
-                    className="mb-4 w-[100%] md:w-[60%]"
-                />
-                <Button className=" mb-6 w-[25%] md:w-[15%]">Post</Button>
-                <h1 className="text-2xl mb-6">Comments:</h1>
-                <div>
-                    <Comment />
-                    <Comment />
-                    <Comment />
-                </div>
+                <CommentSection />
             </div>
         </div>
     );
