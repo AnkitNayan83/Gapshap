@@ -36,13 +36,7 @@ const Posts = ({ params }: Prop) => {
 
             {/* posts */}
             <div className="flex flex-col gap-4 mb-6">
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
+                <h1>no post to show</h1>
             </div>
             {/* pagination */}
             <div className="flex items-center justify-between my-[6%]">
