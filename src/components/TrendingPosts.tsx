@@ -1,6 +1,5 @@
 import React from "react";
 import PostCard from "./PostCard";
-import { Button } from "./ui/button";
 import Pagination from "./Pagination";
 import { Post } from "@/utils/types";
 
@@ -20,17 +19,16 @@ const getData = async (page: number) => {
 
 const TrendingPosts = async ({ page }: Prop) => {
     const data = await getData(page);
-    console.log(data);
 
     return (
-        <div>
+        <div id="recent">
             <h1 className="text-[32px] font-bold">Recent Posts</h1>
             <div>
                 {data?.posts.map((post: Post) => (
                     <PostCard post={post} key={post.id} />
                 ))}
             </div>
-            <Pagination />
+            <Pagination page={page} />
         </div>
     );
 };
