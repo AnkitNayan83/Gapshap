@@ -10,7 +10,7 @@ type Prop = {
 
 const PostCard = ({ post }: Prop) => {
     return (
-        <div>
+        <div key={post.id}>
             <div className="flex flex-col md:flex-row items-center gap-8 mt-20">
                 <div className="relative w-[100%] md:flex-1 h-[35vh]">
                     <Image

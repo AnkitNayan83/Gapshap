@@ -8,7 +8,9 @@ type Prop = {
 };
 
 const getData = async (page: number) => {
-    const res = await fetch(`http://localhost:3000/api/posts?page=${page}`);
+    const res = await fetch(`http://localhost:3000/api/posts?page=${page}`, {
+        cache: "no-cache",
+    });
 
     if (!res.ok) {
         throw new Error("Server not working");
@@ -19,16 +21,17 @@ const getData = async (page: number) => {
 
 const TrendingPosts = async ({ page }: Prop) => {
     const data = await getData(page);
-
+    const hasPrev = page > 1;
+    const hasNext = 3 * (page - 1) + 3 < data.count;
     return (
         <div id="recent">
             <h1 className="text-[32px] font-bold">Recent Posts</h1>
             <div>
                 {data?.posts.map((post: Post) => (
-                    <PostCard post={post} key={post.id} />
+                    <PostCard post={post} />
                 ))}
             </div>
-            <Pagination page={page} />
+            <Pagination page={page} hasNext={hasNext} hasPrev={hasPrev} />
         </div>
     );
 };
